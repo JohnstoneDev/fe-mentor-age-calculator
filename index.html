@@ -5,33 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple: 'hsl(259, 100%, 65%)',
+            white: 'hsl(0, 0%, 100%)',
+            'light-red': 'hsl(0, 100%, 67%)',
+            'off-white': 'hsl(0, 0%, 94%)',
+            'light-grey': 'hsl(0, 0%, 86%)',
+            'smokey-grey': 'hsl(0, 1%, 44%)',
+            'off-black': 'hsl(0, 0%, 8%)'
+          },
+          screens : {
+            laptop : '1440px'
+          },
+          fontFamily : {
+            'sans' : ['Poppins']
+          },
+          container : {
+            center : true
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
   </style>
+  <title>Age calculator app</title>
 </head>
-<body>
+<body class="text-left container m-auto p-8 bg-off-white flex flex-col items-center justify-center content-center">
+  <div class="m-auto mt-28 p-12 bg-white rounded-2xl rounded-br-[65px]">
+    <div class="p-8 flex flex-col gap-4">
+      <form class="gap-4 flex items-start">
+        <label class="flex flex-col items-start justify-start gap-2">
+          <span class="text-light-red uppercase">Day</span>
+          <input class="laptop:text-[32px] border p-3 w-[150px]" placeholder="DD" />
+        </label>
 
-  Day
-  DD
+        <label class="flex flex-col items-start justify-start gap-2">
+          <span class="text-light-red uppercase">Month</span>
+          <input class="laptop:text-[32px] border p-3 w-[150px]" placeholder="MM">
+        </label>
 
-  Month
-  MM
+        <label class="flex flex-col items-start justify-start gap-2">
+          <span class="text-light-red uppercase">Year</span>
+          <input class="laptop:text-[32px] border p-3 w-[150px]" placeholder="YYYY"/>
+        </label>
+      </form>
 
-  Year
-  YYYY
+      <div class="flex items-end justify-between content-center">
+        <p class="border-t-2 p-3 w-full"></p>
+        <img src="./assets/images/icon-arrow.svg" class="bg-purple rounded-full p-2"/>
+      </div>
 
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <div class="flex flex-col italic font-extrabold laptop:text-7xl text-2xl">
+        <article>
+          <span class="text-purple">--</span> years
+        </article>
+        <article>
+          <span class="text-purple">--</span> months
+        </article>
+        <article>
+          <span class="text-purple">--</span> days
+        </article>
+      </div>
+    </div>
   </div>
 </body>
 </html>
