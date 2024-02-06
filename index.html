@@ -31,7 +31,10 @@
           container : {
             center : true
           }
-        }
+        },
+        plugins : [
+          // require('@tailwindcss/forms'),
+        ]
       }
     }
   </script>
@@ -50,17 +53,17 @@
       <form class="gap-4 flex items-start">
         <label class="flex flex-col items-start justify-start gap-2">
           <span class="text-light-red uppercase">Day</span>
-          <input class="laptop:text-[32px] border p-3 w-[150px]" placeholder="DD" />
+          <input class="laptop:text-[32px] border p-3 w-[150px] rounded-lg focus:outline-purple " placeholder="DD" />
         </label>
 
         <label class="flex flex-col items-start justify-start gap-2">
           <span class="text-light-red uppercase">Month</span>
-          <input class="laptop:text-[32px] border p-3 w-[150px]" placeholder="MM">
+          <input class="laptop:text-[32px] border p-3 w-[150px] rounded-lg focus:outline-purple " placeholder="MM">
         </label>
 
         <label class="flex flex-col items-start justify-start gap-2">
           <span class="text-light-red uppercase">Year</span>
-          <input class="laptop:text-[32px] border p-3 w-[150px]" placeholder="YYYY"/>
+          <input class="laptop:text-[32px] border p-3 w-[150px] rounded-lg focus:outline-purple " placeholder="YYYY"/>
         </label>
       </form>
 
